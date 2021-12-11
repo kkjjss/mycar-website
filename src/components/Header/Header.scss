@@ -1,0 +1,31 @@
+div.Header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 10px;
+    margin-left: 18rem;
+    margin-right: 1.5rem;
+    .user-info {
+        padding: 0 1rem;
+        display: inline-flex;
+        justify-content: flex-end;
+        align-items: center;
+        .user-icon {
+            margin-right: 5px;
+        }
+        span {
+            margin-top: 2px;
+            font-size: 14pt;
+        }
+    }
+    .logout-button {
+        background-color: rgb(255, 255, 255);
+        padding: 3px 6px;
+        border: 0.0625rem solid;
+        display: flex;
+        align-items: center;
+        border-radius: 0.5rem;
+        border-color: rgb(210, 214, 218);
+        cursor: pointer;
+    }
+}

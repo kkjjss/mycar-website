@@ -1,17 +1,18 @@
 import React, { useState } from 'react'
 import { Link, Route, Routes, BrowserRouter as Router } from 'react-router-dom';
-import Home from './pages/Home';
-import About from './pages/About';
+import Home from './pages/Home/Home';
+import About from './pages/About/About';
 import Profile from './components/Profile';
 import { signIn } from './auth/auth';
-import { AuthRoute } from './auth/AuthRouter';
-import LogoutButton from './components/LogoutButton.js';
-import Sidebar from './components/Sidebar';
-import LoginForm from './components/LoginForm.js';
+import { AuthRoute } from './AuthRouter';
+import LogoutButton from './components/Header/LogoutButton/LogoutButton.js';
+import LoginForm from './pages/auth/login/LoginForm.js';
 import RegisterForm from './components/RegisterForm';
-import './App.css'
+import SideNav from './components/SideNav/SideNav';
+import Header from './components/Header/Header';
+import './App.scss'
 
-const App = () => {
+export default function App() {
     const [user, setUser] = useState(null);
     // authenticated: 로그인 상태 확인
     const authenticated = user != null;
@@ -24,72 +25,36 @@ const App = () => {
 
     return (
         <Router>
-            {
-                authenticated ? (
-                    <header>
-                        <div className="head-box">
-                            <Link to="/">
-                                <img className="logo" src={require("./logo.png").default} alt="logo"/>
-                            </Link>
-                        </div>
-                        
-                        {/* <Link to="/">
-                            <button>Home</button>
-                        </Link>
+            {authenticated ?
+                    <Header user={user} logout={logout}></Header>
+            : <></>}
+            {authenticated ? <SideNav></SideNav> : <></>}
+            <div className="content-box">
+                <Routes >
+                    {/* 로그인 & 회원가입 */}
+                    {/* 인증정보 필요X */}
+                    <Route path="/register" element={ <RegisterForm authenticated={authenticated} signUpCompleted={signUpCompleted} /> } />
+                    <Route path="/login" element={ <LoginForm authenticated={authenticated} login={login} /> } />
 
-                        <Link to="/about">
-                            <button>About</button>
-                        </Link>
+                    {/* 인증정보 필요 라우터 */}
+                    <Route path="/profile" element={
+                        <AuthRoute authenticated={authenticated} >
+                            <Profile user={user} />
+                        </AuthRoute>
+                    }/>
+                    <Route path="/" element={
+                        <AuthRoute authenticated={authenticated} >
+                            <Home />
+                        </AuthRoute>
+                    } />
 
-                        <Link to="/profile">
-                            <button>Profile</button>
-                        </Link>
-
-                        {
-                            authenticated ? ( <LogoutButton logout={logout} /> ) : ( <></> )
-                        }
-
-                        {
-                            authenticated ? ( <></> ) : ( signUpCompleted ? <></> :
-                                <Link to="/register">
-                                    <button>Register</button>
-                                </Link>
-                            )
-                        } */}
-                        <Sidebar logout={logout}/>
-                    </header>
-                ) : <></>
-            }
-            <main>
-                <div class="content-box">
-                    <Routes >
-                        {/* 로그인 & 회원가입 */}
-                        {/* 인증정보 필요X */}
-                        <Route path="/register" element={ <RegisterForm authenticated={authenticated} signUpCompleted={signUpCompleted} /> } />
-                        <Route path="/login" element={ <LoginForm authenticated={authenticated} login={login} /> } />
-
-                        {/* 인증정보 필요 라우터 */}
-                        <Route path="/profile" element={
-                            <AuthRoute authenticated={authenticated} >
-                                <Profile user={user} />
-                            </AuthRoute>
-                        }/>
-                        <Route path="/" element={
-                            <AuthRoute authenticated={authenticated} >
-                                <Home />
-                            </AuthRoute>
-                        } />
-
-                        <Route path="/about" element={
-                            <AuthRoute authenticated={authenticated} >
-                                <About/>
-                            </AuthRoute>
-                        } />
-                    </Routes> 
-                </div>
-            </main>
+                    <Route path="/about" element={
+                        <AuthRoute authenticated={authenticated} >
+                            <About/>
+                        </AuthRoute>
+                    } />
+                </Routes> 
+            </div>
         </Router>
     );
 }
-
-export default App;

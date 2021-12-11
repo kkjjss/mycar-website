@@ -1,0 +1,113 @@
+.LoginForm {
+    background-color: rgb(2, 19, 64);
+    min-height: 100vh;
+    .title-wrapper {
+        color: #f8f9fa;
+        flex-basis: 40%;
+        -webkit-box-flex: 0;
+        flex-grow: 0;
+        max-width: 40%;
+        .title-box {
+            margin-top: 400px;
+            padding-left: 50px;
+            padding-right: 150px;
+        }
+    }
+    .login-wrapper {
+        flex-basis: 25%;
+        -webkit-box-flex: 0;
+        flex-grow: 0;
+        max-width: 25%;
+        box-sizing: border-box;
+        flex-direction: row;
+        .login-form {
+            margin-top: 150px;
+            background-color: #ffffff;
+            border: 0.0625rem solid #d2d6da;
+            border-radius: 0.5rem;
+            .login-text {
+                padding-top: 60px;
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+            .login-box {
+                padding: 24px;
+                padding-bottom: 60px;
+                .email-text,
+                .password-text {
+                    padding-bottom: 3px;
+                }
+                .login.email,
+                .login.password {
+                    margin-bottom: 16px;
+                    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+                    letter-spacing: 00.00938em;
+                    box-sizing: border-box;
+                    position: relative;
+                    cursor: text;
+                    place-items: center;
+                    width: 100%!important;
+                    height: auto;
+                    padding: 0.5rem 0.75rem;
+                    font-size: 0.875rem!important;
+                    font-weight: 400!important;
+                    line-height: 1.4!important;
+                    color: #495057!important;
+                    background-color: #ffffff!important;
+                    background-clip: padding-box!important;
+                    border: 0.0625rem solid #d2d6da;
+                    appearance: none!important;
+                    border-radius: 0.5rem;
+                }
+                .login {
+                    .input.id,
+                    .input.password {
+                        box-shadow: none;
+                        font: inherit;
+                        letter-spacing: inherit;
+                        color: currentColor;
+                        padding: 4px 0 5px;
+                        border: 0;
+                        box-sizing: content-box;
+                        background: none;
+                        height: 1.4375em;
+                        margin: 0;
+                        -webkit-tap-highlight-color: transparent;
+                        display: block;
+                        min-width: 0;
+                        width: 100%;
+                        -webkit-animation-name: mui-auto-fill-cancel;
+                        animation-name: mui-auto-fill-cancel;
+                        -webkit-animation-duration: 10ms;
+                        animation-duration: 10ms;
+                        width: 100%!important;
+                        height: 1.375rem;
+                        padding: 0!important;
+                    }
+                }
+                .login-button {
+                    font: inherit;
+                    margin-top: 20px;
+                    margin-bottom: 8px;
+                    border: 0;
+                    cursor: pointer;
+                    height: 1.4375em;
+                    width: 100%;
+                    background-image: linear-gradient(135deg, rgb(33, 82, 255), rgb(35, 115, 255));
+                    color: rgb(255, 255, 255);
+                    border-radius: 0.5rem;
+                    width: 100%!important;
+                    height: auto;
+                    min-height: 2.5rem;
+                    font-size: 0.83em;
+                    font-weight: bold;
+                }
+                .to-regiter {
+                    margin: 5px;
+                    margin-bottom: 0;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
