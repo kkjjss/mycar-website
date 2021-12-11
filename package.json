@@ -2,6 +2,7 @@
     "name": "mycar",
     "version": "2.0.0",
     "private": true,
+    "homepage": "https://kkjjss.github.io/mycar-website/",
     "dependencies": {
         "@emotion/cache": "^11.4.0",
         "@emotion/react": "^11.4.1",
@@ -38,7 +39,9 @@
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
-        "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start"
+        "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
     },
     "eslintConfig": {
         "extends": [
@@ -67,6 +70,7 @@
         "eslint-plugin-prettier": "^3.4.0",
         "eslint-plugin-react": "^7.24.0",
         "eslint-plugin-react-hooks": "^4.2.0",
+        "gh-pages": "3.2.3",
         "prettier": "^2.3.2"
     }
 }
