@@ -24,7 +24,7 @@ export default function App() {
     const signUpCompleted = ({ sign }) => setSIgnUp({ sign });
 
     return (
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
             {authenticated ?
                     <Header user={user} logout={logout}></Header>
             : <></>}

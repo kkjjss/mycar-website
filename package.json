@@ -2,7 +2,7 @@
     "name": "mycar",
     "version": "2.0.0",
     "private": true,
-    "homepage": "https://kkjjss.github.io/mycar-website/",
+    "homepage": "https://kkjjss.github.io/mycar-website",
     "dependencies": {
         "@emotion/cache": "^11.4.0",
         "@emotion/react": "^11.4.1",

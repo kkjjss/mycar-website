@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/mycar-website/static/css/main.b083e906.chunk.css",
-    "main.js": "/mycar-website/static/js/main.a4e9643f.chunk.js",
-    "main.js.map": "/mycar-website/static/js/main.a4e9643f.chunk.js.map",
+    "main.js": "/mycar-website/static/js/main.165a7f59.chunk.js",
+    "main.js.map": "/mycar-website/static/js/main.165a7f59.chunk.js.map",
     "runtime-main.js": "/mycar-website/static/js/runtime-main.66c1430c.js",
     "runtime-main.js.map": "/mycar-website/static/js/runtime-main.66c1430c.js.map",
     "static/js/2.c7d6c2ae.chunk.js": "/mycar-website/static/js/2.c7d6c2ae.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.66c1430c.js",
     "static/js/2.c7d6c2ae.chunk.js",
     "static/css/main.b083e906.chunk.css",
-    "static/js/main.a4e9643f.chunk.js"
+    "static/js/main.165a7f59.chunk.js"
   ]
 }
