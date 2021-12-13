@@ -1,15 +1,15 @@
-import React from 'react'
-import './About.css'
+import React from 'react';
+import './About.scss';
 
 const About = () => {
-    return (
-        <div className='content-wrapper'>
-            <div className='content'>
-                <h1>About</h1>
-                <p>How am I?</p>
-            </div>
-        </div>
-    )
-}
+  return (
+    <div className="content-wrapper">
+      <div className="content">
+        <h1>About</h1>
+        <p>How am I?</p>
+      </div>
+    </div>
+  );
+};
 
-export default About
+export default About;

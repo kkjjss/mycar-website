@@ -13,9 +13,11 @@ function Sidebar() {
   const pathName = useLocation().pathname;
 
   const menus = [
-    { name: "기본 정보", path: "/" },
-    { name: "회원 관리", path: "/about" },
-    { name: "캐시 관리", path: "/profile" },
+    { name: "내 차 조회", path: "/" },
+    { name: "정비소 예약", path: "/repairShop" },
+    { name: "부품 구매", path: "/profile" },
+    { name: "고객 센터", path: "/help"},
+    { name: "마이 페이지", path: "/myPage" },
   ];
 
   return (
