@@ -3,7 +3,7 @@ import { Link, Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Profile from './components/Profile';
-import { signIn } from './modules/auth';
+import { signin } from './modules/api';
 import { AuthRoute } from './AuthRouter';
 // import LogoutButton from './components/Header/LogoutButton/LogoutButton.js';
 import LoginForm from './pages/Auth/login/LoginForm';
@@ -22,19 +22,19 @@ export default function App() {
 
   // 로그인, 로그아웃
   const login = async ({ email, password }) => {
-    const authResult = await signIn({ email, password });
+    const authResult = await signin({ email, password });
 
     //로그인 실패
     if (authResult.message !== 'Success') {
       setUser(null);
       setAuthenticated(false);
       return 'Failure';
-    } else if (authResult.message === 'Success') {
-      setUser(authResult.name);
+    } else if (authResult.message === 'Success' && authResult.data.name) {
+      setUser(authResult.data.name);
       setAuthenticated(true);
-      window.sessionStorage.setItem('name', authResult.name);
+      window.sessionStorage.setItem('name', authResult.data.name);
       window.sessionStorage.setItem('email', email);
-      window.sessionStorage.setItem('jwt', authResult.data);
+      window.sessionStorage.setItem('jwt', 'bearer ' +authResult.data.token);
       return 'Success';
     }
   };
@@ -45,8 +45,8 @@ export default function App() {
   };
 
   // 회원가입
-  const [signUp, setSignUp] = useState();
-  const signUpCompleted = ({ sign }) => setSignUp({ sign });
+  // const [signUp, setSignUp] = useState();
+  // const signUpCompleted = ({ sign }) => setSignUp({ sign });
 
   useEffect(
     (user) => {
@@ -79,7 +79,7 @@ export default function App() {
             element={
               <SignupForm
                 authenticated={authenticated}
-                signUpCompleted={signUpCompleted}
+                // signUpCompleted={signUpCompleted} 
               />
             }
           />

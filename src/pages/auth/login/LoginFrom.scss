@@ -1,3 +1,5 @@
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
 .LoginForm {
   background-color: rgb(2, 19, 64);
   min-height: 100vh;
@@ -22,6 +24,7 @@
     flex-direction: row;
     .login-form {
       margin-top: 150px;
+      margin-bottom: 150px;
       background-color: #ffffff;
       border: 0.0625rem solid #d2d6da;
       border-radius: 0.5rem;
@@ -45,8 +48,9 @@
         }
         .login.email,
         .login.password {
+          // color: black;
           margin-bottom: 16px;
-          font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+          font-family: NanumSquare,sans-serif;
           letter-spacing: 00.00938em;
           box-sizing: border-box;
           position: relative;
@@ -89,6 +93,9 @@
             width: 100% !important;
             height: 1.375rem;
             padding: 0 !important;
+          }
+          .input.password[type=password] {
+            font-family: "굴림";
           }
         }
         .login-button {

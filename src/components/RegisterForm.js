@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
-import { users } from '../modules/auth';
+import { users } from '../modules/api';
 
 function RegisterForm({ authenticated, history, signUpCompleted, ...props }) {
   const [name, setName] = useState('');

@@ -1,3 +1,6 @@
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+
 .SignupForm {
   background-color: rgb(2, 19, 64);
   min-height: 100vh;
@@ -11,6 +14,7 @@
       margin-top: 400px;
       padding-left: 50px;
       padding-right: 150px;
+      min-width: 207px;
     }
   }
   .signup-wrapper {
@@ -23,9 +27,11 @@
     flex-direction: row;
     .signup-form {
       margin-top: 100px;
+      margin-bottom: 80px;
       background-color: #ffffff;
       border: 0.0625rem solid #d2d6da;
       border-radius: 0.5rem;
+      height: 750px;
       .signup-text {
         padding-top: 60px;
         padding-left: 24px;
@@ -52,7 +58,7 @@
         .signup.email,
         .signup.password {
           margin-bottom: 16px;
-          font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+          font-family: NanumSquare,sans-serif;
           letter-spacing: 00.00938em;
           box-sizing: border-box;
           position: relative;
@@ -103,6 +109,9 @@
             height: 1.375rem;
             padding: 0 !important;
           }
+          .input.password[type=password] {
+            font-family: "굴림";
+          }
         }
         .error {
           border-color: red !important;
@@ -133,6 +142,37 @@
           margin-bottom: 0;
           font-size: 15px;
         }
+      }
+    }
+    .signup-form.complete{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding-left: 60px;
+      padding-right: 60px;
+
+
+      .signup-button {
+        font: inherit;
+        margin-top: 50px;
+        margin-bottom: 8px;
+        border: 0;
+        cursor: pointer;
+        height: 1.4375em;
+        width: 100%;
+        background-image: linear-gradient(
+          135deg,
+          rgb(33, 82, 255),
+          rgb(35, 115, 255)
+        );
+        color: rgb(255, 255, 255);
+        border-radius: 0.5rem;
+        width: 100% !important;
+        height: auto;
+        min-height: 2.5rem;
+        font-size: 0.83em;
+        font-weight: bold;
       }
     }
   }
