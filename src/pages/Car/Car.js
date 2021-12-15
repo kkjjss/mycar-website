@@ -43,13 +43,15 @@ const Car = () => {
                 <div>- [차량기본정보4]</div>
               </div>
             </div>
-            <div>
+            <div className='obdwrap'>
               <div className="car obddata">
                 <div className="name">차량 진단 데이터</div>
                 <div className="obd">
                   <div className=" a">
                     <div className=" a-a">
-                      <div className="box a-a-a">a</div>
+                      <div className="box a-a-a">
+                        a
+                      </div>
                       <div className="box a-a-b">a</div>
                     </div>
                     <div className="box a-b">a</div>

@@ -8,17 +8,7 @@
     width: 100%;
     border-top-left-radius: 10px;
     padding: 15px;
-    // h4 {
-    //     padding-bottom: 15px;
-    //     padding-left: 3px;
-    // }
     .c {
-      // color: red;
-      // .contentHeader {
-      //   .text {
-      //   }
-      // }
-
       .content-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -38,7 +28,7 @@
             margin-bottom: 20px;
             img {
               width: 100%;
-              // max-width: 250px;
+              // height: 70%;
             }
           }
           .year {
@@ -48,7 +38,7 @@
           }
           .name {
             font-weight: bolder;
-            font-size: 0.9rem;
+            // font-size: 0.9rem;
           }
           .basic-info {
             display: grid;
@@ -56,9 +46,16 @@
             width: 100%;
           }
         }
+        .obdwrap{
+          display: flex;
+          flex-direction: column;
+          align-content: stretch;
+        }
         .car.obddata {
+          height: 90%;
           .obd {
             margin-top: 8px;
+            
             display: flex;
             flex-direction: column;
             .box {
@@ -69,7 +66,8 @@
               padding: 10px;
             }
             .box:hover {
-              transform: scale(102%);
+              transform: scale(103%);
+              border-color: aqua;
             }
             .a {
               // background-color: blue;
@@ -78,7 +76,7 @@
               .a-a {
                 display: flex;
                 flex-direction: column;
-                width: 50%;
+                width: 60%;
                 .a-a-a {
                   height: 70px;
                 }
@@ -99,8 +97,9 @@
         .modal-button {
           transition: all 0.2s cubic-bezier(0, 0, 0, 1);
           color: #fff;
+          font-weight: bold;
           margin: 10px;
-          margin-top: 20px;
+          margin-top: 0px;
           border: 2px solid rgb(234, 234, 234);
           border-radius: 0.5rem;
           height: 45px;
@@ -115,7 +114,7 @@
           cursor: pointer;
         }
         .modal-button:hover {
-          transform: scale(103%);
+          transform: scale(102%);
         }
         .modal-button:active {
           transform: scale(100%);
