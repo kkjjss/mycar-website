@@ -12,7 +12,7 @@ function SignupForm({ authenticated, ...props }) {
   const [birthday, setBirthday] = useState(null);
   const [nickName, setNickname] = useState(null);
 
-  let location = { ...props };
+  // let location = { ...props };
 
   const [signupProcess, setSignupProcess] = useState(false);
   const [signupResult, setSignupResult] = useState(false);
