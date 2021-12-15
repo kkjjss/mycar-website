@@ -1,11 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router';
 import './Car.scss';
+import EstimateModal from 'Modal/EstimateModal/EstimateModal';
+import ChatModal from 'Modal/ChatModal/ChatModal'
 
 // import { useMatch } from 'react-router-dom';
 
 const Car = () => {
   const { id } = useParams();
+  const [selectedEstimate, setSelectedEstimate]= useState(false);
+  const [selectedChat, setSelectedChat]= useState(false);
+
+  const onClickEstimate = () => {
+    setSelectedEstimate(true);
+  }
+
+  const onClickChat = (id) => {
+    setSelectedChat(id);
+  }
+
+  const onModalClose = () => {
+    setSelectedEstimate(false);
+    setSelectedChat(undefined);
+  }
 
   const car = {
     id: '001',
@@ -17,8 +34,6 @@ const Car = () => {
     temperature: 'bad',
     dpf: 'good',
   };
-
-  console.dir(id);
 
   return (
     <div className="Home content-wrapper">
@@ -47,22 +62,78 @@ const Car = () => {
               <div className="car obddata">
                 <div className="name">차량 진단 데이터</div>
                 <div className="obd">
-                  <div className=" a">
+                  <div className="a">
                     <div className=" a-a">
-                      <div className="box a-a-a">
-                        a
+                      <div className={"box a-a-a" + (car.cooling_water==='good'?' good':' bad')}>
+                        <div className='title'>
+                          냉각수 온도
+                        </div>
                       </div>
-                      <div className="box a-a-b">a</div>
+                      <div className={"box a-a-b" + (car.temperature==='good'?' good':' bad')}>
+                        <div className='title'>
+                          촉매 온도
+                        </div></div>
                     </div>
-                    <div className="box a-b">a</div>
+                    <div className={"box a-b" + (car.engine==='good'?' good':' bad')}>
+                      <div className='title'>
+                        엔진 부하 상태
+                      </div></div>
                   </div>
-                  <div className="box b">a</div>
+                  <div className={"box b" + (car.dpf==='good'?' good':' bad')}>
+                    <div className='title'>
+                      DPF
+                    </div></div>
                 </div>
               </div>
-              <div className="modal-button"> 견적 요청 보내기 </div>
+              <div className="modal-button" onClick={()=>onClickEstimate(car.id)}> 견적 요청 보내기 </div>
+              <EstimateModal
+                onModalClose = {onModalClose}
+                selectedEstimate = {selectedEstimate} />
             </div>
-
-            <div className="car">AA</div>
+            <div className="car logwrap">
+                <div className="name">견적 기록</div>
+                <div className='table'>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th className='category'>항목</th>
+                        <th className='date'>요청 일시</th>
+                        <th className='company'>업체</th>
+                        <th className='estimate'>견적</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr onClick={()=>onClickChat(1)}>
+                        <th className='category'>엔진 오일</th>
+                        <th className='date'>21/12/01</th>
+                        <th className='company'>오분카</th>
+                        <th className='estimate'>₩33,000</th>
+                      </tr>
+                      <tr onClick={()=>onClickChat(2)}>
+                        <th className='category'>엔진 오일</th>
+                        <th className='date'>21/12/01</th>
+                        <th className='company'>블루카</th>
+                        <th className='estimate'>₩36,000</th>
+                      </tr>
+                      <tr>
+                        <th className='category'>범퍼 손상</th>
+                        <th className='date'>21/11/31</th>
+                        <th className='company'>매일카센타</th>
+                        <th className='estimate'>-</th>
+                      </tr>
+                      <tr>
+                        <th className='category'>배터리 교체</th>
+                        <th className='date'>21/10/13</th>
+                        <th className='company'>오분카</th>
+                        <th className='estimate'>-</th>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <ChatModal
+                    onModalClose = {onModalClose}
+                    selectedChat = {selectedChat} />
+                </div>
+            </div>
           </div>
         </div>
       </div>
