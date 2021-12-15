@@ -8,6 +8,7 @@ import { AuthRoute } from './AuthRouter';
 // import LogoutButton from './components/Header/LogoutButton/LogoutButton.js';
 import LoginForm from './pages/Auth/login/LoginForm';
 import SignupForm from './pages/Auth/signup/SignupForm';
+import Car from './pages/Car/Car';
 import SideNav from './components/SideNav/SideNav';
 import Header from './components/Header/Header';
 import './App.scss';
@@ -34,7 +35,7 @@ export default function App() {
       setAuthenticated(true);
       window.sessionStorage.setItem('name', authResult.data.name);
       window.sessionStorage.setItem('email', email);
-      window.sessionStorage.setItem('jwt', 'bearer ' +authResult.data.token);
+      window.sessionStorage.setItem('jwt', 'bearer ' + authResult.data.token);
       return 'Success';
     }
   };
@@ -79,10 +80,11 @@ export default function App() {
             element={
               <SignupForm
                 authenticated={authenticated}
-                // signUpCompleted={signUpCompleted} 
+                // signUpCompleted={signUpCompleted}
               />
             }
           />
+
           <Route
             path="/login"
             element={<LoginForm authenticated={authenticated} login={login} />}
@@ -90,18 +92,26 @@ export default function App() {
 
           {/* 인증정보 필요 라우터 */}
           <Route
-            path="/profile"
-            element={
-              <AuthRoute authenticated={authenticated}>
-                <Profile user={user} />
-              </AuthRoute>
-            }
-          />
-          <Route
             path="/"
             element={
               <AuthRoute authenticated={authenticated}>
                 <Home user={user} />
+              </AuthRoute>
+            }
+          />
+          <Route
+            path="/car/:id"
+            element={
+              <AuthRoute authenticated={authenticated}>
+                <Car user={user} />
+              </AuthRoute>
+            }
+          />
+          <Route
+            path="/profile"
+            element={
+              <AuthRoute authenticated={authenticated}>
+                <Profile user={user} />
               </AuthRoute>
             }
           />

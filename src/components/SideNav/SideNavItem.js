@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
 function SidebarItem({ menu, isActive }) {
   return (
-    <div className={'SideNavItem'+(isActive?" active":" inactive")}>
+    <div className={'SideNavItem' + (isActive ? ' active' : ' inactive')}>
       <p>{menu.name}</p>
     </div>
   );

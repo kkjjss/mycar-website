@@ -1,0 +1,131 @@
+// .content-wrapper {
+//     background-color: rgb(246, 247, 249);
+// }
+.Home {
+  .CarInfo {
+    margin-top: 1px;
+    margin-left: 17rem;
+    width: 100%;
+    border-top-left-radius: 10px;
+    padding: 15px;
+    // h4 {
+    //     padding-bottom: 15px;
+    //     padding-left: 3px;
+    // }
+    .c {
+      // color: red;
+      // .contentHeader {
+      //   .text {
+      //   }
+      // }
+
+      .content-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        // height: 80%;
+        .car {
+          margin: 10px;
+          background-color: #fff;
+          border: 2px solid rgb(234, 234, 234);
+          border-radius: 0.5rem;
+          padding: 30px;
+          box-shadow: rgba(0, 0, 0, 0.05) 0rem 20px 27px 0rem;
+          .img {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            margin-bottom: 20px;
+            img {
+              width: 100%;
+              // max-width: 250px;
+            }
+          }
+          .year {
+            font-size: 12pt;
+            color: rgb(165, 165, 165);
+            margin-bottom: 5px;
+          }
+          .name {
+            font-weight: bolder;
+            font-size: 0.9rem;
+          }
+          .basic-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            width: 100%;
+          }
+        }
+        .car.obddata {
+          .obd {
+            margin-top: 8px;
+            display: flex;
+            flex-direction: column;
+            .box {
+              transition: all 0.2s cubic-bezier(0.34, 1.61, 0.7, 1.3);
+              margin: 7px;
+              border: 2px solid rgb(234, 234, 234);
+              border-radius: 0.5rem;
+              padding: 10px;
+            }
+            .box:hover {
+              transform: scale(102%);
+            }
+            .a {
+              // background-color: blue;
+              display: flex;
+              flex-direction: row;
+              .a-a {
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+                .a-a-a {
+                  height: 70px;
+                }
+                .a-a-b {
+                  height: 70px;
+                }
+              }
+              .a-b {
+                // background-color: blue;
+                width: 50%;
+              }
+            }
+            .b {
+              height: 70px;
+            }
+          }
+        }
+        .modal-button {
+          transition: all 0.2s cubic-bezier(0, 0, 0, 1);
+          color: #fff;
+          margin: 10px;
+          margin-top: 20px;
+          border: 2px solid rgb(234, 234, 234);
+          border-radius: 0.5rem;
+          height: 45px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-image: linear-gradient(
+            135deg,
+            rgb(33, 82, 255),
+            rgb(35, 115, 255)
+          );
+          cursor: pointer;
+        }
+        .modal-button:hover {
+          transform: scale(103%);
+        }
+        .modal-button:active {
+          transform: scale(100%);
+          background-image: linear-gradient(
+            135deg,
+            rgb(26, 66, 211),
+            rgb(29, 93, 204)
+          );
+        }
+      }
+    }
+  }
+}

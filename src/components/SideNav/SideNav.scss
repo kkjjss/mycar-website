@@ -28,54 +28,65 @@
     -webkit-backdrop-filter: saturate(200%) blur(1.875rem);
     backdrop-filter: saturate(200%) blur(1.875rem);
     height: calc(100vh - 2rem);
-    margin: 1rem;
+    // margin: 1rem;
     border-radius: 1rem;
     border: none;
     border-right: none;
     .logo-box {
-        padding: 2rem 2rem 0.5rem;
-        padding-bottom: 0;
-        cursor: pointer;
-        font-weight: 600;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .logo {
-            width: 25px;
-            height: auto;
-            padding-right: 7px;
-            padding-bottom: 3px;
-        }
-        a {
-            color: rgb(2, 19, 64);
-        }
+      padding: 2rem 2rem 0.5rem;
+      padding-bottom: 0;
+      cursor: pointer;
+      font-weight: 600;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .logo {
+        width: 25px;
+        height: auto;
+        padding-right: 7px;
+        padding-bottom: 3px;
+      }
+      a {
+        color: rgb(2, 19, 64);
+      }
     }
     hr {
-        margin: 1.5rem;
-        margin-bottom: 1.5rem;
-        border-color: #c8c8c84d;
+      margin: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-color: #c8c8c84d;
     }
     .SideNavItem {
-        box-shadow: none;
-        color: gray;
-        cursor: pointer;
-        margin: 0 1rem;
-        margin-bottom: 0.75rem;
-        display: flex;
-        font-weight: 500;
-        font-size: 1rem;
-        padding: 0.675rem 0.3rem 0.675rem 1.5rem;
+      transition: all 0.2s cubic-bezier(0.34, 1.61, 0.7, 1.3);
+      box-shadow: none;
+      color: gray;
+      cursor: pointer;
+      margin: 0 1rem;
+      margin-bottom: 0.75rem;
+      display: flex;
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 0.675rem 0.3rem 0.675rem 1.5rem;
     }
+    .SideNavItem:hover {
+      transform: translateX(6px);
+      // font-weight: normal;
+    }
+  
     .SideNavItem.active {
-        // background-color: rgb(33, 82, 255);
-        background-image: linear-gradient(135deg, rgb(33, 82, 255), rgb(35, 115, 255));
-        box-shadow: rgba(0, 0, 0, 0.2) 0rem 0.5rem 1rem 0rem;
-        display: flex;
-        padding: 0.675rem 0.1rem 0.675rem 1.7rem;
-        align-items: center;
-        user-select: none;
-        white-space: nowrap;
-        border-radius: 0.5rem;
-        color: white;
+      // background-color: rgb(33, 82, 255);
+      background-image: linear-gradient(
+        135deg,
+        rgb(33, 82, 255),
+        rgb(35, 115, 255)
+      );
+      box-shadow: rgba(0, 0, 0, 0.2) 0rem 0.5rem 1rem 0rem;
+      display: flex;
+      padding: 0.675rem 0.1rem 0.675rem 1.7rem;
+      align-items: center;
+      user-select: none;
+      white-space: nowrap;
+      border-radius: 0.5rem;
+      color: white;
     }
-}
+  }
+  
