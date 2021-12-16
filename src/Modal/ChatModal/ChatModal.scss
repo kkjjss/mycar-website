@@ -1,15 +1,19 @@
 @import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
-
+// .Modal {
+//   display: flex;
+//   flex-direction: column;
+// }
 .wrap {
+  // padding: 15px;
   display: flex;
   flex-direction: column;
-  .header{
+  .header {
     display: flex;
     width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .name{
+    .name {
       font-size: 17px;
       font-weight: 900;
     }
@@ -19,16 +23,118 @@
     }
   }
   .chat {
-    width: 70%;
+    width: 80%;
+    height: 440px;
     .text {
+      width: 80%;
       font-size: 15px;
       border: 1px solid rgba(128, 128, 128, 0.247);
       padding: 5px;
       padding-left: 9px;
       padding-right: 9px;
       font-weight: 500;
+      background-color: rgb(2, 19, 64);
+      color: #fff;
+      border-radius: 0.8rem;
+      box-shadow: rgba(0, 0, 0, 0.05) 0rem 5px 5px 0rem;
+    }
+    .estimateBox {
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+      font-size: 15px;
+      border: 1px solid rgba(128, 128, 128, 0.247);
+      padding: 5px;
+      padding-left: 15px;
+      padding-right: 15px;
+      font-weight: 500;
       background-color: #fff;
       border-radius: 0.8rem;
+      box-shadow: rgba(0, 0, 0, 0.05) 0rem 5px 5px 0rem;
+      .header {
+        align-items: flex-start;
+        margin: 0px;
+        .titleh {
+          margin: 0px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+        .place,
+        .review {
+          font-size: small;
+        }
+      }
+      hr {
+        color: rgb(148, 148, 148);
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      .content {
+        .titlec {
+          margin: 0px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          font-weight: bolder;
+        }
+        .feec {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        .pricec {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          font-weight: 900;
+          color: rgb(2, 19, 64);
+        }
+        .buttonc {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          .b:hover {
+            cursor: pointer;
+          }
+          .reserv {
+            width: 43%;
+            display: flex;
+            justify-content: center;
+            font-size: 15px;
+            border: 1px solid rgba(128, 128, 128, 0.247);
+            padding: 5px;
+            // padding-left: 15px;
+            // padding-right: 15px;
+            font-weight: 500;
+            background-color: #fff;
+            border-radius: 0.5rem;
+            // box-shadow: rgba(0, 0, 0, 0.05) 0rem 5px 5px 0rem;
+          }
+          .chatting {
+            width: 43%;
+            display: flex;
+            justify-content: center;
+            font-size: 15px;
+            border: 1px solid rgba(128, 128, 128, 0.247);
+            padding: 5px;
+            // padding-left: 15px;
+            // padding-right: 15px;
+            font-weight: 500;
+            background-color: rgb(1, 30, 110);
+            color: #fff;
+            border-radius: 0.5rem;
+            // box-shadow: rgba(0, 0, 0, 0.05) 0rem 5px 5px 0rem;
+          }
+        }
+      }
     }
   }
+}
+.ui {
+  padding: 0;
+  margin: 0;
+  height: 40px;
+  border-width: 0px;
+  padding: 5px;
 }
