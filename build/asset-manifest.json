@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/mycar-website/static/css/main.f4e9a2bb.chunk.css",
-    "main.js": "/mycar-website/static/js/main.006bef47.chunk.js",
-    "main.js.map": "/mycar-website/static/js/main.006bef47.chunk.js.map",
-    "runtime-main.js": "/mycar-website/static/js/runtime-main.f1262db8.js",
-    "runtime-main.js.map": "/mycar-website/static/js/runtime-main.f1262db8.js.map",
-    "static/js/2.a9b124bb.chunk.js": "/mycar-website/static/js/2.a9b124bb.chunk.js",
-    "static/js/2.a9b124bb.chunk.js.map": "/mycar-website/static/js/2.a9b124bb.chunk.js.map",
-    "static/js/3.edb9c941.chunk.js": "/mycar-website/static/js/3.edb9c941.chunk.js",
-    "static/js/3.edb9c941.chunk.js.map": "/mycar-website/static/js/3.edb9c941.chunk.js.map",
+    "main.css": "/mycar-website/static/css/main.ad90e591.chunk.css",
+    "main.js": "/mycar-website/static/js/main.3d26e2c1.chunk.js",
+    "main.js.map": "/mycar-website/static/js/main.3d26e2c1.chunk.js.map",
+    "runtime-main.js": "/mycar-website/static/js/runtime-main.6c8cfd07.js",
+    "runtime-main.js.map": "/mycar-website/static/js/runtime-main.6c8cfd07.js.map",
+    "static/js/2.bcf7d054.chunk.js": "/mycar-website/static/js/2.bcf7d054.chunk.js",
+    "static/js/2.bcf7d054.chunk.js.map": "/mycar-website/static/js/2.bcf7d054.chunk.js.map",
+    "static/js/3.dbf87571.chunk.js": "/mycar-website/static/js/3.dbf87571.chunk.js",
+    "static/js/3.dbf87571.chunk.js.map": "/mycar-website/static/js/3.dbf87571.chunk.js.map",
     "index.html": "/mycar-website/index.html",
-    "static/css/main.f4e9a2bb.chunk.css.map": "/mycar-website/static/css/main.f4e9a2bb.chunk.css.map",
-    "static/js/2.a9b124bb.chunk.js.LICENSE.txt": "/mycar-website/static/js/2.a9b124bb.chunk.js.LICENSE.txt",
+    "static/css/main.ad90e591.chunk.css.map": "/mycar-website/static/css/main.ad90e591.chunk.css.map",
+    "static/js/2.bcf7d054.chunk.js.LICENSE.txt": "/mycar-website/static/js/2.bcf7d054.chunk.js.LICENSE.txt",
     "static/media/logo.1a7d327f.png": "/mycar-website/static/media/logo.1a7d327f.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.f1262db8.js",
-    "static/js/2.a9b124bb.chunk.js",
-    "static/css/main.f4e9a2bb.chunk.css",
-    "static/js/main.006bef47.chunk.js"
+    "static/js/runtime-main.6c8cfd07.js",
+    "static/js/2.bcf7d054.chunk.js",
+    "static/css/main.ad90e591.chunk.css",
+    "static/js/main.3d26e2c1.chunk.js"
   ]
 }
