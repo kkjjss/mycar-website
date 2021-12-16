@@ -3,29 +3,29 @@ import request from './request';
 //로그인
 export async function signin({ email, password }) {
   // test
-  // let result = {};
-  // result.data = (email === 'a', password === 'a')
-  //   ? {
-  //       code: 200,
-  //       message: 'Success',
-  //       data: {
-  //         name: 'AAAAAA',
-  //         token:
-  //           'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyMCIsImlhdCI6MTYzOTM3NzkwNSwiZXhwIjoxNjQxOTY5OTA1fQ.8c-l3x2CW7ROD3M-DOip0uHSIaf_h_wbB8itzXrNTxtUnmtoYDv-HzDfcUNB1HunnRBDVy4diCncd41Cd3ok_w',
-  //       },
-  //     }
-  //   : {
-  //       code: 200,
-  //       message: 'Success',
-  //       data: '',
-  //     };
-  // console.log(result.data);
+  let result = {};
+  result.data = (email === 'a', password === 'a')
+    ? {
+        code: 200,
+        message: 'Success',
+        data: {
+          name: 'AAAAAA',
+          token:
+            'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyMCIsImlhdCI6MTYzOTM3NzkwNSwiZXhwIjoxNjQxOTY5OTA1fQ.8c-l3x2CW7ROD3M-DOip0uHSIaf_h_wbB8itzXrNTxtUnmtoYDv-HzDfcUNB1HunnRBDVy4diCncd41Cd3ok_w',
+        },
+      }
+    : {
+        code: 200,
+        message: 'Success',
+        data: '',
+      };
+  console.log(result.data);
 
   // request
-  const result = await request.post('/user/signin', {
-    email: email,
-    password: password,
-  });
+  // const result = await request.post('/user/signin', {
+  //   email: email,
+  //   password: password,
+  // });
 
   return result.data;
 }
